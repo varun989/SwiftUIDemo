@@ -14,14 +14,17 @@ import Foundation
 
     let id = UUID() //to conform to identifiable
     let type: TimerType
+    weak var delegate: UpdateSystemValuesProtocol?
     var isTimerActive = false
 
     var percentageString: String {
         return completionPercentage == 0 ? "" : String(format: "%.0f%%", completionPercentage)
     }
 
-    init(type: TimerType) {
+    //MARK: Init
+    init(type: TimerType, delegate: UpdateSystemValuesProtocol? = nil) {
         self.type = type
+        self.delegate = delegate
     }
 
     //MARK: Timer Start / Pause Actions
@@ -53,6 +56,13 @@ import Foundation
             return
         }
         completionPercentage += 1
+
+        if type == .timerA, completionPercentage > 20 {
+            //When timer A is greater than 20%, start matching the screen darkness level to timer A: get updated brightness level and convert it into darkness
+            if let delegate {
+                delegate.screenBrightnessValueUpdated(value: (completionPercentage/100)) 
+            }
+        }
 
         if completionPercentage == 100 {
             print("Timer: \(type.rawValue) reached 100% at \(Date())")

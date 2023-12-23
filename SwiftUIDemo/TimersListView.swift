@@ -31,6 +31,9 @@ struct TimersListView: View {
                 TimerDetailView(timerModel: timerModel)
             }
         }
+        .onChange(of: timersListViewModel.screenDarkness) { oldValue, newValue in
+            UIScreen.main.brightness = newValue
+        }
     }
 }
 
