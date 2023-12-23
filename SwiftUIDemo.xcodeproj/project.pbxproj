@@ -64,13 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				8BCB2B9C2B3669B0005735A2 /* SwiftUIDemoApp.swift */,
-				8BCB2B9E2B3669B0005735A2 /* TimersListView.swift */,
-				8BCB2BAA2B3669F1005735A2 /* TimerInfoButton.swift */,
-				8BCB2BAE2B366F6C005735A2 /* TimerDetailView.swift */,
-				8BCB2BAC2B366A2E005735A2 /* TimerType.swift */,
-				8BCB2BB02B3675B7005735A2 /* TimerModel.swift */,
-				8BCB2BB22B368513005735A2 /* TimersListViewModel.swift */,
-				8BCB2BB42B368F1E005735A2 /* Extension MPVolumeView.swift */,
+				8BCB2BB62B3691B8005735A2 /* Views */,
+				8BCB2BB72B3691D6005735A2 /* Models */,
+				8BCB2BB82B3691E8005735A2 /* Extensions */,
 				8BCB2BA02B3669B2005735A2 /* Assets.xcassets */,
 				8BCB2BA22B3669B2005735A2 /* Preview Content */,
 			);
@@ -83,6 +79,34 @@
 				8BCB2BA32B3669B2005735A2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8BCB2BB62B3691B8005735A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BCB2B9E2B3669B0005735A2 /* TimersListView.swift */,
+				8BCB2BAA2B3669F1005735A2 /* TimerInfoButton.swift */,
+				8BCB2BAE2B366F6C005735A2 /* TimerDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8BCB2BB72B3691D6005735A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BCB2BAC2B366A2E005735A2 /* TimerType.swift */,
+				8BCB2BB02B3675B7005735A2 /* TimerModel.swift */,
+				8BCB2BB22B368513005735A2 /* TimersListViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8BCB2BB82B3691E8005735A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8BCB2BB42B368F1E005735A2 /* Extension MPVolumeView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
