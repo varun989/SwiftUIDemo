@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TimerInfoButton: View {
     let timerType: TimerType
+    let action: () -> Void
 
     var body: some View {
         ZStack(alignment: .trailing) {
@@ -16,7 +17,9 @@ struct TimerInfoButton: View {
             Text(timerType.percentageString)
                 .padding()
 
-            Button(action: {}, label: {
+            Button(action: {
+                action()
+            }, label: {
                 Spacer()
                 Text(timerType.rawValue)
                 Spacer()
@@ -29,5 +32,5 @@ struct TimerInfoButton: View {
 }
 
 #Preview {
-    TimerInfoButton(timerType: .timerA)
+    TimerInfoButton(timerType: .timerA, action: {})
 }

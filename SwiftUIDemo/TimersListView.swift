@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct TimersListView: View {
+
+    @State private var presentedScreens: [TimerType] = []
+
     var body: some View {
-        VStack {
-            ForEach(TimerType.allCases) { timerType in
+        NavigationStack(path: $presentedScreens) {
+            VStack {
+                ForEach(TimerType.allCases) { timerType in
 
-                TimerInfoButton(timerType: timerType)
-
+                    TimerInfoButton(timerType: timerType) {
+                        presentedScreens.append(timerType)
+                    }
+                }
+            }
+            .padding()
+            .navigationDestination(for: TimerType.self) { timerType in
+                TimerDetailView(timerType: timerType)
             }
         }
-        .padding()
     }
 }
 
