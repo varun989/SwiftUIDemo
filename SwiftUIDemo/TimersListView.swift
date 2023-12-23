@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct TimersListView: View {
 
@@ -33,6 +34,9 @@ struct TimersListView: View {
         }
         .onChange(of: timersListViewModel.screenDarkness) { oldValue, newValue in
             UIScreen.main.brightness = newValue
+        }
+        .onChange(of: timersListViewModel.systemVolume) { oldValue, newValue in
+            MPVolumeView.setVolume(newValue)
         }
     }
 }

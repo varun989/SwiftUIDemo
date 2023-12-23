@@ -16,6 +16,7 @@ protocol UpdateSystemValuesProtocol: AnyObject {
 @Observable class TimersListViewModel {
 
     var systemScreenBrightness: CGFloat
+    var systemVolume: Float
     var timerModels = [TimerModel]()
 
     var screenDarkness: CGFloat {
@@ -24,8 +25,9 @@ protocol UpdateSystemValuesProtocol: AnyObject {
 
     init(systemScreenBrightness: CGFloat) {
         self.systemScreenBrightness = systemScreenBrightness
+        self.systemVolume = 0
         timerModels = [TimerModel(type: .timerA, delegate: self),
-        TimerModel(type: .timerB),
+        TimerModel(type: .timerB, delegate: self),
         TimerModel(type: .timerC)]
     }
 }
@@ -37,7 +39,7 @@ extension TimersListViewModel: UpdateSystemValuesProtocol {
     }
     
     func volumeValueUpdated(value: Float) {
-
+        systemVolume = value
     }
     
 

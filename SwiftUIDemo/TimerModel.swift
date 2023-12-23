@@ -64,6 +64,13 @@ import Foundation
             }
         }
 
+        if type == .timerB {
+            //Update system volume% with timerB
+            if let delegate {
+                delegate.volumeValueUpdated(value: (Float(completionPercentage)/100))
+            }
+        }
+
         if completionPercentage == 100 {
             print("Timer: \(type.rawValue) reached 100% at \(Date())")
         }
