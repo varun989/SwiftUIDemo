@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Allows starting and pausing a timer and displays timer completion%
 struct TimerDetailView: View {
     
     let timerModel: TimerModel

@@ -8,6 +8,7 @@
 import SwiftUI
 import MediaPlayer
 
+/// Displays the three timer buttons using TimerInfoButton and allows navigation to TimerDetialView
 struct TimersListView: View {
 
     var timersListViewModel: TimersListViewModel

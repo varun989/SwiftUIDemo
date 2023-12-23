@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Timer types available in the app.
 enum TimerType: String{
     case timerA = "Timer A"
     case timerB = "Timer B"

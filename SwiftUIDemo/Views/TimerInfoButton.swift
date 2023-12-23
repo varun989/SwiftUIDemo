@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// TimerInfoButton displayed on TimerListView display timers and the %completion
 struct TimerInfoButton: View {
     let timerType: TimerType
     let percentageString: String

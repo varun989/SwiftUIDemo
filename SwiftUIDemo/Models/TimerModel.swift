@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// Allows to start / pause a timer, calculates timer completion% String for display, 
+/// handles timer fire actions
+/// and updates TimersListViewModel to update system screen brightness/darkness and volume.
 @Observable class TimerModel: Identifiable {
 
     private var completionPercentage = 0.0
@@ -28,6 +31,7 @@ import Foundation
     }
 
     //MARK: Timer Start / Pause Actions
+    /// Starts the timer, initializes it first if nil
     func startTimer() {
         if timer == nil {
             initTimer()
@@ -36,13 +40,16 @@ import Foundation
         isTimerActive = true
     }
 
+    /// Pauses the timer
     func pauseTimer() {
         timer?.invalidate()
         timer = nil
+        print("Timer: \(type.rawValue) paused at \(Date())")
         isTimerActive = false
     }
 
     //MARK: Private Methods
+    /// Initialize a timer based on the TimerType duration
     private func initTimer() {
         let timeInterval = type.duration/100.0  //for eg: timerA takes 60s to go from 0 to 100, should update 1 percent every 60/100th sec
 
@@ -51,6 +58,7 @@ import Foundation
         })
     }
 
+    /// Action executed when timer fires
     private func timerAction() {
         if completionPercentage == 100 {
             return
@@ -58,7 +66,7 @@ import Foundation
         completionPercentage += 1
 
         if type == .timerA, completionPercentage > 20 {
-            //When timer A is greater than 20%, start matching the screen darkness level to timer A: get updated brightness level and convert it into darkness
+            //When timer A is greater than 20%, start matching the screen darkness level to timer A: get the updated brightness level and calculate darkness before triggering UI update
             if let delegate {
                 delegate.screenBrightnessValueUpdated(value: (completionPercentage/100)) 
             }
@@ -89,6 +97,4 @@ extension TimerModel: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
-
-
 }

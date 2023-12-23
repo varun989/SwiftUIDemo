@@ -13,6 +13,7 @@ protocol UpdateSystemValuesProtocol: AnyObject {
     func volumeValueUpdated(value: Float)
 }
 
+/// Observable model  with system screen brightnes, volume and timerModels properties to update TimerListView
 @Observable class TimersListViewModel {
 
     var systemScreenBrightness: CGFloat
@@ -34,6 +35,7 @@ protocol UpdateSystemValuesProtocol: AnyObject {
 
 extension TimersListViewModel: UpdateSystemValuesProtocol {
     //MARK: Conformance to UpdateSystemValuesProtocol
+    
     func screenBrightnessValueUpdated(value: CGFloat) {
         systemScreenBrightness = value
     }
