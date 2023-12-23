@@ -9,26 +9,33 @@ import SwiftUI
 
 struct TimersListView: View {
 
-    @State private var presentedScreens: [TimerType] = []
+    let timers: [TimerModel]
+    @State private var presentedScreens: [TimerModel] = []
 
     var body: some View {
         NavigationStack(path: $presentedScreens) {
             VStack {
-                ForEach(TimerType.allCases) { timerType in
+                ForEach(timers) { timerModel in
 
-                    TimerInfoButton(timerType: timerType) {
-                        presentedScreens.append(timerType)
+                    TimerInfoButton(
+                        timerType: timerModel.type,
+                        percentageString: timerModel.percentageString
+                        ) {
+                        presentedScreens.append(timerModel)
                     }
                 }
             }
             .padding()
-            .navigationDestination(for: TimerType.self) { timerType in
-                TimerDetailView(timerType: timerType)
+            .navigationDestination(for: TimerModel.self) { timerModel in
+                TimerDetailView(timerModel: timerModel)
             }
         }
     }
 }
 
 #Preview {
-    TimersListView()
+    TimersListView(timers:
+                    [TimerModel(type: .timerA),
+                     TimerModel(type: .timerB),
+                     TimerModel(type: .timerC)])
 }

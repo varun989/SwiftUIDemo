@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TimerDetailView: View {
     
-    let timerType: TimerType
+    let timerModel: TimerModel
 
     var body: some View {
         VStack {
@@ -22,14 +22,14 @@ struct TimerDetailView: View {
             .border(Color.black)
             .padding(.horizontal)
 
-            Text(timerType.percentageString)
+            Text(timerModel.percentageString)
                 .font(.title2)
                 .frame(height: 30)
         }
-        .navigationTitle(timerType.rawValue)
+        .navigationTitle(timerModel.type.rawValue)
     }
 }
 
 #Preview {
-    TimerDetailView(timerType: .timerA)
+    TimerDetailView(timerModel: TimerModel(type: .timerB))
 }
