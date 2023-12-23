@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TimerType: String, CaseIterable {
+enum TimerType: String{
     case timerA = "Timer A"
     case timerB = "Timer B"
     case timerC = "Timer C"
@@ -24,8 +24,3 @@ enum TimerType: String, CaseIterable {
     }
 }
 
-extension TimerType: Identifiable {
-    var id: Self {
-        return self
-    }
-}
