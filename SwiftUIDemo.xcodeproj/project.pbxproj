@@ -11,6 +11,7 @@
 		8BCB2B9F2B3669B0005735A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2B9E2B3669B0005735A2 /* ContentView.swift */; };
 		8BCB2BA12B3669B2005735A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BCB2BA02B3669B2005735A2 /* Assets.xcassets */; };
 		8BCB2BA42B3669B2005735A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BCB2BA32B3669B2005735A2 /* Preview Assets.xcassets */; };
+		8BCB2BAB2B3669F1005735A2 /* TimerInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2BAA2B3669F1005735A2 /* TimerInfoButton.swift */; };
 		8BCB2BAD2B366A2E005735A2 /* TimerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2BAC2B366A2E005735A2 /* TimerType.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		8BCB2B9E2B3669B0005735A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8BCB2BA02B3669B2005735A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BCB2BA32B3669B2005735A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8BCB2BAA2B3669F1005735A2 /* TimerInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInfoButton.swift; sourceTree = "<group>"; };
 		8BCB2BAC2B366A2E005735A2 /* TimerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +57,7 @@
 			children = (
 				8BCB2B9C2B3669B0005735A2 /* SwiftUIDemoApp.swift */,
 				8BCB2B9E2B3669B0005735A2 /* ContentView.swift */,
+				8BCB2BAA2B3669F1005735A2 /* TimerInfoButton.swift */,
 				8BCB2BAC2B366A2E005735A2 /* TimerType.swift */,
 				8BCB2BA02B3669B2005735A2 /* Assets.xcassets */,
 				8BCB2BA22B3669B2005735A2 /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BCB2BAB2B3669F1005735A2 /* TimerInfoButton.swift in Sources */,
 				8BCB2BAD2B366A2E005735A2 /* TimerType.swift in Sources */,
 				8BCB2B9F2B3669B0005735A2 /* ContentView.swift in Sources */,
 				8BCB2B9D2B3669B0005735A2 /* SwiftUIDemoApp.swift in Sources */,
