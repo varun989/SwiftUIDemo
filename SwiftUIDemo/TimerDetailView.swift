@@ -20,12 +20,13 @@ struct TimerDetailView: View {
                 Spacer()
             })
             .border(Color.black)
+            .padding(.horizontal)
 
             Text(timerType.percentageString)
                 .font(.title2)
-                .padding(.top)
+                .frame(height: 30)
         }
-        .padding(.horizontal)
+        .navigationTitle(timerType.rawValue)
     }
 }
 
