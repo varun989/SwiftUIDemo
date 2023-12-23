@@ -13,7 +13,13 @@ struct TimerDetailView: View {
 
     var body: some View {
         VStack {
-            Button(action: {}, label: {
+            Button(action: {
+                if timerModel.isTimerActive {
+                    timerModel.pauseTimer()
+                } else {
+                    timerModel.startTimer()
+                }
+            }, label: {
                 Spacer()
                 Text("Start / Pause")
                     .padding()
