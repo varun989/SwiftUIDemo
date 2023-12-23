@@ -11,9 +11,7 @@ import SwiftUI
 struct SwiftUIDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            TimersListView(timers: [TimerModel(type: .timerA),
-                                    TimerModel(type: .timerB),
-                                    TimerModel(type: .timerC)])
+            TimersListView(timersListViewModel: TimersListViewModel(systemScreenBrightness: UIScreen.main.brightness))
         }
     }
 }

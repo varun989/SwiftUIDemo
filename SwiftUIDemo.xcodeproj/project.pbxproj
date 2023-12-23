@@ -15,6 +15,7 @@
 		8BCB2BAD2B366A2E005735A2 /* TimerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2BAC2B366A2E005735A2 /* TimerType.swift */; };
 		8BCB2BAF2B366F6C005735A2 /* TimerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2BAE2B366F6C005735A2 /* TimerDetailView.swift */; };
 		8BCB2BB12B3675B7005735A2 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2BB02B3675B7005735A2 /* TimerModel.swift */; };
+		8BCB2BB32B368513005735A2 /* TimersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2BB22B368513005735A2 /* TimersListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8BCB2BAC2B366A2E005735A2 /* TimerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerType.swift; sourceTree = "<group>"; };
 		8BCB2BAE2B366F6C005735A2 /* TimerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDetailView.swift; sourceTree = "<group>"; };
 		8BCB2BB02B3675B7005735A2 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		8BCB2BB22B368513005735A2 /* TimersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				8BCB2BAE2B366F6C005735A2 /* TimerDetailView.swift */,
 				8BCB2BAC2B366A2E005735A2 /* TimerType.swift */,
 				8BCB2BB02B3675B7005735A2 /* TimerModel.swift */,
+				8BCB2BB22B368513005735A2 /* TimersListViewModel.swift */,
 				8BCB2BA02B3669B2005735A2 /* Assets.xcassets */,
 				8BCB2BA22B3669B2005735A2 /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 				8BCB2BAF2B366F6C005735A2 /* TimerDetailView.swift in Sources */,
 				8BCB2BAD2B366A2E005735A2 /* TimerType.swift in Sources */,
 				8BCB2BB12B3675B7005735A2 /* TimerModel.swift in Sources */,
+				8BCB2BB32B368513005735A2 /* TimersListViewModel.swift in Sources */,
 				8BCB2B9F2B3669B0005735A2 /* TimersListView.swift in Sources */,
 				8BCB2B9D2B3669B0005735A2 /* SwiftUIDemoApp.swift in Sources */,
 			);

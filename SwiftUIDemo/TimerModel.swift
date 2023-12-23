@@ -24,6 +24,7 @@ import Foundation
         self.type = type
     }
 
+    //MARK: Timer Start / Pause Actions
     func startTimer() {
         if timer == nil {
             initTimer()
@@ -38,6 +39,7 @@ import Foundation
         isTimerActive = false
     }
 
+    //MARK: Private Methods
     private func initTimer() {
         let timeInterval = type.duration/100.0  //for eg: timerA takes 60s to go from 0 to 100, should update 1 percent every 60/100th sec
 
@@ -59,7 +61,8 @@ import Foundation
 }
 
 extension TimerModel: Hashable {
-
+    //MARK: Conformance to Hashable
+    
     //Equatable conformance, needed to conform to Hashable
     static func == (lhs: TimerModel, rhs: TimerModel) -> Bool {
         lhs.type == rhs.type

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct TimersListView: View {
 
-    let timers: [TimerModel]
+    var timersListViewModel: TimersListViewModel
+
     @State private var presentedScreens: [TimerModel] = []
 
     var body: some View {
         NavigationStack(path: $presentedScreens) {
             VStack {
-                ForEach(timers) { timerModel in
+                ForEach(timersListViewModel.timerModels) { timerModel in
 
                     TimerInfoButton(
                         timerType: timerModel.type,
@@ -34,8 +35,5 @@ struct TimersListView: View {
 }
 
 #Preview {
-    TimersListView(timers:
-                    [TimerModel(type: .timerA),
-                     TimerModel(type: .timerB),
-                     TimerModel(type: .timerC)])
+    TimersListView(timersListViewModel: TimersListViewModel(systemScreenBrightness: UIScreen.main.brightness))
 }
